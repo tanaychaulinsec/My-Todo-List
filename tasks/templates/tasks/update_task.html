@@ -1,0 +1,39 @@
+{% load static%}
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<img src="{% static "tasks/logo.png" %}" alt="My image">
+<style>
+	
+
+	body{
+		background-color: rgb(122, 119, 161);
+	}
+
+	input{
+		width: 100%;
+		padding: 15px 20px;
+		margin: 10px 2;		
+		box-sizing: border-box;
+	}
+
+	input::placeholder {
+	  color: #302525;
+	}
+
+	.submit{
+		background-color: rgba(107, 19, 48, 0.856);
+	}
+
+	
+
+</style>
+<h1>Update Task</h1>
+
+<form method="POST" action="">
+	{% csrf_token %}
+
+	{{form}}
+	<input type="submit" name="Update Task">
+	
+	
+</form>

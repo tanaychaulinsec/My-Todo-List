@@ -1,0 +1,19 @@
+{% load static%}
+
+<style>
+	
+
+		body{
+			background-color: rgb(147, 143, 192);
+		}
+</style>
+<img src="{% static "tasks/logo.png" %}" alt="My image">
+<h1>Are you sure you want to delete "{{item}}"?</h1>
+
+
+<a href="{% url 'list' %}" >Cancel</a>
+
+<form method="POST" action="">
+	{% csrf_token %}
+	<input type="submit" name="Confirm">
+</form>
